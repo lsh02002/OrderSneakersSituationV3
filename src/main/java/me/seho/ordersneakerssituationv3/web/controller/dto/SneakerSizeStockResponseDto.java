@@ -1,4 +1,4 @@
-package me.seho.ordersneakerssituationv3.web.controller;
+package me.seho.ordersneakerssituationv3.web.controller.dto;
 
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;

@@ -1,16 +1,18 @@
-package me.seho.ordersneakerssituationv3.repository.sneakers;
+package me.seho.ordersneakerssituationv3.repository.sneakers.koreaInventory;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import me.seho.ordersneakerssituationv3.repository.sneakers.sneaker.Sneaker;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 
 @Entity
 @Table(name = "korea_inventory")
+@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
+@Builder
 public class KoreaInventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

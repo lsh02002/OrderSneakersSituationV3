@@ -1,14 +1,16 @@
-package me.seho.ordersneakerssituationv3.repository.sneakers;
+package me.seho.ordersneakerssituationv3.repository.sneakers.sneaker;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "sneaker_model_traits")
+@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
+@Builder
 public class SneakerModelTrait {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

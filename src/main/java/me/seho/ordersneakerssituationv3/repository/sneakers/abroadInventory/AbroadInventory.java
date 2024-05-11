@@ -1,14 +1,17 @@
-package me.seho.ordersneakerssituationv3.repository.sneakers;
+package me.seho.ordersneakerssituationv3.repository.sneakers.abroadInventory;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import me.seho.ordersneakerssituationv3.repository.sneakers.sneaker.Sneaker;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "abroad_inventory")
+@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
+@Builder
 public class AbroadInventory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

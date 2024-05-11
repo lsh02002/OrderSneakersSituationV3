@@ -14,5 +14,3 @@ spring:
       hibernate:
         #globally_quoted_identifiers: true
         format_sql: true
-
-txtfilePath: classpath:/resources/
