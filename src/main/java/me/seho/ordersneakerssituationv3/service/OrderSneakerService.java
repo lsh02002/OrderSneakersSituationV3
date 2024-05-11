@@ -106,6 +106,7 @@ public class OrderSneakerService {
                 .build();
     }
 
+    @Transactional
     public Double setUserOrder(UserOrderRequestDto requestDto){
         Sneaker sneaker = sneakerRepository.findById(requestDto.getModel_id()).get();
         GeneralUser generalUser = generalUserRepository.findById(requestDto.getUser_id()).get();
@@ -134,6 +135,7 @@ public class OrderSneakerService {
         return sneaker.getPrice();
     }
 
+    @Transactional
     public Boolean setUserWish(UserWishRequestDto requestDto){
         try {
             Sneaker sneaker = sneakerRepository.findById(requestDto.getModel_id()).get();
@@ -154,6 +156,7 @@ public class OrderSneakerService {
         }
     }
 
+    @Transactional(readOnly = true)
     public Page<UserOrderResponseDto> orderPay(Integer generalUserId, Pageable pageable){
         GeneralUser generalUser = generalUserRepository.findById(generalUserId).get();
         Page<Orders> orders = orderRepository.findByGeneralUser(generalUser, pageable);
@@ -161,6 +164,7 @@ public class OrderSneakerService {
         return UserOrderResponseDto.toDtoList(orders);
     }
 
+    @Transactional
     public Boolean makePayment(UserPayRequestDto requestDto) {
         try {
             GeneralUser generalUser = generalUserRepository.findById(requestDto.getGeneral_user_id()).get();
