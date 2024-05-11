@@ -44,4 +44,6 @@ public class Orders {
     @Column(name = "order_at", nullable = false)
     private LocalDateTime orderAt;
 
+    @Column(name = "order_quantity")
+    private Integer orderQuantity;
 }

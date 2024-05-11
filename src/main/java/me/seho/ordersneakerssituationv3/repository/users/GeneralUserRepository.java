@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface GeneralUserRepository extends JpaRepository<GeneralUser, Integer> {
     List<GeneralUser> findByName(String name);
+
 }

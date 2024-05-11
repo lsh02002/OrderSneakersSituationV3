@@ -349,6 +349,7 @@ public class PreProcessService {
                 .sneakerSize(sneakerSize)
                 .totalPrice(sneakerPrice)
                 .orderAt(LocalDateTime.now())
+                .orderQuantity(1)
                 .build();
 
         orderRepository.save(order);

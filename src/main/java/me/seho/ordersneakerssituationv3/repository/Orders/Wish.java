@@ -1,8 +1,7 @@
 package me.seho.ordersneakerssituationv3.repository.Orders;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import me.seho.ordersneakerssituationv3.repository.sneakers.sneaker.Sneaker;
 import me.seho.ordersneakerssituationv3.repository.users.GeneralUser;
 
@@ -11,8 +10,11 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "wishs")
+@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Wish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,4 +34,7 @@ public class Wish {
 
     @Column(name = "wish_at", nullable = false)
     private LocalDateTime wishAt;
+
+    @Column(name = "sneaker_size")
+    private Integer sneakerSize;
 }
